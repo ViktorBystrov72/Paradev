@@ -1,0 +1,23 @@
+{
+  "issue": "https://github.com/ParadevAI/Paradev/issues/8775",
+  "baseline": "6646c6399725537cda3de125b955465a8bc6d071",
+  "method": "Real dev Electron app, CLI workspace creation for a merged PR with deleted branch; CDP mouse input and screenshots; read-only SQLite observations.",
+  "renderer": "http://localhost:3005/",
+  "cdpPort": 9237,
+  "pullRequest": "https://github.com/ParadevAI/Paradev/pull/9730",
+  "before": {
+    "id": "5a474a56-8a35-412f-8046-601349e642ec",
+    "upstream_branch": "refs/pull/9730/head",
+    "head_sha": "5ced4956be8e1ee9f2ed6b8bf7d1b76a718fcf84",
+    "pull_request_id": null
+  },
+  "after": {
+    "id": "5a474a56-8a35-412f-8046-601349e642ec",
+    "upstream_branch": "refs/pull/9730/head",
+    "head_sha": "5ced4956be8e1ee9f2ed6b8bf7d1b76a718fcf84",
+    "pull_request_id": "83c052d9-91a3-4ec7-ba3f-4b3c244eaa79",
+    "pr_number": 9730,
+    "state": "merged"
+  },
+  "humanReview": false
+}
