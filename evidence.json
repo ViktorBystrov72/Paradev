@@ -1,0 +1,233 @@
+{
+  "issue": "https://github.com/ParadevAI/Paradev/issues/9417",
+  "baseline": "a5512aa4888a18f6dc7d80342412b62ab03577d2",
+  "source_commit": "c93012dbcfce37bea0813df939d27197bfd9c3a2",
+  "renderer": "http://localhost:3025/",
+  "cdp_port": 9238,
+  "method": "Isolated Electron dev app with seeded local account; real workspaces A and B in a small git fixture; actual CDP mouse input, full dev-stack restarts, screenshots and read-only DOM/localStorage measurements.",
+  "steps": [
+    "Collapse sidebar to obtain a 1672px pane, hide activity in A, switch to B. Original code shows the panel; fixed code keeps it hidden.",
+    "Hide B, stop and restart the isolated dev stack, open B with a terminal. Original code shows the panel; fixed code restores hidden.",
+    "Show then hide again; expand sidebar to a 1444px pane, open and close the floating popover, collapse sidebar again. The remembered docked preference remains hidden."
+  ],
+  "states": {
+    "before-a-hidden": {
+      "url": "http://localhost:3025/#/v2-workspace/4e333f36-e72e-4e9f-9d87-4dea304de8ee",
+      "width": 1728,
+      "height": 1084,
+      "visibility": null,
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "true",
+          "opacity": "0",
+          "paneWidth": 1672,
+          "inset": ""
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "false"
+        }
+      ]
+    },
+    "before-new-workspace": {
+      "url": "http://localhost:3025/#/v2-workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+      "width": 1728,
+      "height": 1084,
+      "visibility": null,
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "false",
+          "opacity": "1",
+          "paneWidth": 1672,
+          "inset": "340px"
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "true"
+        }
+      ]
+    },
+    "before-restart-hidden": {
+      "url": "http://localhost:3025/#/v2-workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+      "width": 1728,
+      "height": 1084,
+      "visibility": null,
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "true",
+          "opacity": "0",
+          "paneWidth": 1672,
+          "inset": ""
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "false"
+        }
+      ]
+    },
+    "before-restart": {
+      "url": "http://localhost:3025/#/v2-workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+      "width": 1728,
+      "height": 1084,
+      "visibility": null,
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "false",
+          "opacity": "1",
+          "paneWidth": 1672,
+          "inset": "340px"
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "true"
+        }
+      ]
+    },
+    "after-a-hidden": {
+      "url": "http://localhost:3025/#/v2-workspace/4e333f36-e72e-4e9f-9d87-4dea304de8ee",
+      "width": 1728,
+      "height": 1084,
+      "visibility": "{\"state\":{\"hidden\":true},\"version\":0}",
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "true",
+          "opacity": "0",
+          "paneWidth": 1672,
+          "inset": ""
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "false"
+        }
+      ]
+    },
+    "after-new-workspace": {
+      "url": "http://localhost:3025/#/v2-workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+      "width": 1728,
+      "height": 1084,
+      "visibility": "{\"state\":{\"hidden\":true},\"version\":0}",
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "true",
+          "opacity": "0",
+          "paneWidth": 1672,
+          "inset": ""
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "false"
+        }
+      ]
+    },
+    "after-restart": {
+      "url": "http://localhost:3025/#/v2-workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+      "width": 1728,
+      "height": 1084,
+      "visibility": "{\"state\":{\"hidden\":true},\"version\":0}",
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "true",
+          "opacity": "0",
+          "paneWidth": 1672,
+          "inset": ""
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "false"
+        }
+      ]
+    },
+    "after-show-a": {
+      "url": "http://localhost:3025/#/v2-workspace/4e333f36-e72e-4e9f-9d87-4dea304de8ee",
+      "width": 1728,
+      "height": 1084,
+      "visibility": "{\"state\":{\"hidden\":false},\"version\":0}",
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "false",
+          "opacity": "1",
+          "paneWidth": 1672,
+          "inset": "340px"
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "true"
+        }
+      ]
+    },
+    "after-narrow-popover": {
+      "url": "http://localhost:3025/#/v2-workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+      "width": 1728,
+      "height": 1084,
+      "visibility": "{\"state\":{\"hidden\":true},\"version\":0}",
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "true",
+          "opacity": "0",
+          "paneWidth": 1444,
+          "inset": ""
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "true"
+        }
+      ]
+    },
+    "after-narrow-wide": {
+      "url": "http://localhost:3025/#/v2-workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+      "width": 1728,
+      "height": 1084,
+      "visibility": "{\"state\":{\"hidden\":true},\"version\":0}",
+      "asides": [
+        {
+          "label": "Активность рабочего пространства",
+          "hidden": "true",
+          "opacity": "0",
+          "paneWidth": 1672,
+          "inset": ""
+        }
+      ],
+      "triggers": [
+        {
+          "label": "Активность рабочего пространства",
+          "expanded": "false"
+        }
+      ]
+    }
+  },
+  "checks": {
+    "focused": "24 pass, 0 fail",
+    "lint": "pass (13601 files)",
+    "typecheck": "42/42 tasks pass",
+    "full_suite": "27/30 tasks pass; desktop 9652/0, host-service 2913/0; unrelated shared/agent-setup/workspace-fs failures; isolated watcher case passes"
+  },
+  "human_review": false,
+  "manual_testing": false
+}
