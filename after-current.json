@@ -1,0 +1,26 @@
+[
+  {
+    "requestedSignal": "SIGTERM",
+    "code": 0,
+    "signal": null,
+    "walBefore": 12392,
+    "walAfter": 0,
+    "disposed": true,
+    "daemonStopped": false,
+    "row": {
+      "value": "kept"
+    }
+  },
+  {
+    "requestedSignal": "SIGINT",
+    "code": 0,
+    "signal": null,
+    "walBefore": 12392,
+    "walAfter": 0,
+    "disposed": true,
+    "daemonStopped": false,
+    "row": {
+      "value": "kept"
+    }
+  }
+]
