@@ -1,0 +1,142 @@
+{
+  "issue": "https://github.com/ParadevAI/Paradev/issues/9724",
+  "baseline": "a5512aa4888a18f6dc7d80342412b62ab03577d2",
+  "source_commit": "fefda4d0faa42af6974ee38c674aaa85441f443f",
+  "claude_code_version": "2.1.236",
+  "model_backend": "Local fake Messages API returning PONG; no paid model inference",
+  "renderer": "http://localhost:3045/",
+  "cdp_port": 9239,
+  "method": "Real Claude CLI, generated wrapper, notify hooks and host state in an isolated dev app. Stream-JSON input stays open after a completed reply. Screenshots show agents explain run in a real dev-app terminal.",
+  "before": {
+    "terminalId": "d2965148-6b78-4a6d-ad96-3684f8758562",
+    "state": "starting",
+    "agentId": "claude",
+    "headline": "claude is starting.",
+    "because": "its recorded event is Attached, which means it launched and has not been given a prompt yet",
+    "details": [
+      "The last hook arrived 53 seconds ago; the session started 53 seconds ago."
+    ],
+    "lastEventType": "Attached",
+    "lastEventAt": 1794747524691
+  },
+  "after": {
+    "terminalId": "aa317894-66ff-4df2-9ab3-6ffd506c205d",
+    "state": "idle",
+    "agentId": "claude",
+    "headline": "claude is idle.",
+    "because": "its recorded event is Stop, which means its turn ended: it finished, or it was interrupted",
+    "details": [
+      "The last hook arrived 17 seconds ago; the session started 20 seconds ago."
+    ],
+    "lastEventType": "Stop",
+    "lastEventAt": 1794748255329
+  },
+  "wait_after": {
+    "terminalId": "aa317894-66ff-4df2-9ab3-6ffd506c205d",
+    "state": "idle",
+    "lastEventType": "Stop"
+  },
+  "profile_sha256_before": "c0384946137c31b2d14efc04badeac806de4bd8d23ed5ce782e642313a254fe9",
+  "profile_sha256_after": "c0384946137c31b2d14efc04badeac806de4bd8d23ed5ce782e642313a254fe9",
+  "model_requests": [
+    {
+      "at": "2026-11-15T12:58:45.676Z",
+      "path": "/v1/messages",
+      "model": "claude-haiku-4-5-20251001",
+      "reply": "PONG"
+    },
+    {
+      "at": "2026-11-15T13:10:55.233Z",
+      "path": "/v1/messages",
+      "model": "claude-haiku-4-5-20251001",
+      "reply": "PONG"
+    }
+  ],
+  "native_cli_settings_probe": [
+    {
+      "mode": "overlay",
+      "code": 0,
+      "output": "PONG\n",
+      "stderr": "",
+      "events": [
+        {
+          "event": "SessionStart",
+          "marker": "profile"
+        },
+        {
+          "event": "UserPromptSubmit",
+          "marker": "profile"
+        },
+        {
+          "event": "Stop",
+          "marker": "profile"
+        },
+        {
+          "event": "SessionEnd",
+          "marker": "profile"
+        }
+      ],
+      "requests": [
+        {
+          "path": "/api/hello"
+        },
+        {
+          "path": "/v1/messages",
+          "model": "claude-haiku-4-5-20251001"
+        }
+      ]
+    },
+    {
+      "mode": "duplicate",
+      "code": 0,
+      "output": "PONG\n",
+      "stderr": "",
+      "events": [
+        {
+          "event": "SessionStart",
+          "marker": "profile"
+        },
+        {
+          "event": "UserPromptSubmit",
+          "marker": "profile"
+        },
+        {
+          "event": "Stop",
+          "marker": "profile"
+        },
+        {
+          "event": "SessionEnd",
+          "marker": "profile"
+        }
+      ],
+      "requests": [
+        {
+          "path": "/api/hello"
+        },
+        {
+          "path": "/v1/messages",
+          "model": "claude-haiku-4-5-20251001"
+        }
+      ]
+    },
+    {
+      "mode": "explicit",
+      "code": 0,
+      "output": "PONG\n",
+      "stderr": "",
+      "events": [],
+      "requests": [
+        {
+          "path": "/api/hello"
+        },
+        {
+          "path": "/v1/messages",
+          "model": "claude-haiku-4-5-20251001"
+        }
+      ]
+    }
+  ],
+  "reference": "https://code.claude.com/docs/en/hooks#hook-handler-fields",
+  "human_review": false,
+  "manual_testing": false
+}
