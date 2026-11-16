@@ -1,0 +1,23 @@
+diff --git a/packages/host-service/src/app.ts b/packages/host-service/src/app.ts
+index c073b4b348..a8765484d3 100644
+--- a/packages/host-service/src/app.ts
++++ b/packages/host-service/src/app.ts
+@@ -234,6 +234,18 @@ export function createApp(options: CreateAppOptions): CreateAppResult {
+ 		}),
+ 	);
+ 
++	const verificationHolds = new Set<() => void>();
++	app.get("/__verification/hold", async (c) => {
++		await new Promise<void>((resolve) => verificationHolds.add(resolve));
++		return c.json({ released: true });
++	});
++	app.get("/__verification/status", (c) => c.json({ held: verificationHolds.size }));
++	app.get("/__verification/release", (c) => {
++		for (const release of verificationHolds) release();
++		verificationHolds.clear();
++		return c.json({ released: true });
++	});
++
+ 	const eventBus = new EventBus({ db, filesystem, gitWatcher });
+ 	eventBus.start();
+ 	// Post-construction wiring (pullRequestRuntime is built before the

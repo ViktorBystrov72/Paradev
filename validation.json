@@ -1,0 +1,73 @@
+{
+  "source": "4192ac399e348004271bfee099783f666b8109d6",
+  "checks": [
+    {
+      "command": "bun run lint:fix",
+      "exit_code": 0,
+      "elapsed_seconds": 5.44,
+      "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-20261116/lint-fix.log"
+    },
+    {
+      "command": "bun run lint",
+      "exit_code": 0,
+      "elapsed_seconds": 3.56,
+      "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-20261116/lint.log"
+    },
+    {
+      "command": "bun run typecheck",
+      "exit_code": 0,
+      "elapsed_seconds": 9.14,
+      "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-20261116/typecheck.log"
+    },
+    {
+      "command": "bun run test",
+      "exit_code": 1,
+      "elapsed_seconds": 1.82,
+      "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-20261116/test.log"
+    },
+    {
+      "command": "bun run test --continue",
+      "exit_code": 1,
+      "elapsed_seconds": 85.09,
+      "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-20261116/test-continue.log"
+    }
+  ],
+  "desktop_tests": {
+    "pass": 9683,
+    "fail": 0
+  },
+  "monorepo_test_tasks": {
+    "pass": 28,
+    "total": 30,
+    "failed": [
+      "@superset/shared#test",
+      "@superset/agent-setup#test"
+    ]
+  },
+  "baseline": [
+    {
+      "package": "shared",
+      "identical_to_main": true,
+      "command": [
+        "bun",
+        "test",
+        "src/rrule.test.ts",
+        "--test-name-pattern",
+        "walks a BYHOUR list"
+      ],
+      "exit_code": 1
+    },
+    {
+      "package": "agent-setup",
+      "identical_to_main": true,
+      "command": [
+        "bun",
+        "test",
+        "src/shell-wrappers.test.ts",
+        "--test-name-pattern",
+        "falls back to system binaries"
+      ],
+      "exit_code": 1
+    }
+  ]
+}

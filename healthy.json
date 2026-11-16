@@ -1,0 +1,22 @@
+{
+  "prompt": {
+    "url": "http://localhost:3105/#/v2-workspace/eb4215de-43e1-426f-bd40-b9859f42cfce",
+    "tabs": 1,
+    "dialogs": [
+      "В этой вкладке ещё работает процессЗакрытие этой вкладки завершит работающий процесс.Don't ask againCancelЗакрыть вкладку"
+    ],
+    "errors": []
+  },
+  "cancelled": {
+    "url": "http://localhost:3105/#/v2-workspace/eb4215de-43e1-426f-bd40-b9859f42cfce",
+    "tabs": 1,
+    "dialogs": [],
+    "errors": []
+  },
+  "closed": {
+    "url": "http://localhost:3105/#/v2-workspace/eb4215de-43e1-426f-bd40-b9859f42cfce",
+    "tabs": 0,
+    "dialogs": [],
+    "errors": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stage": "after",
+  "identity": {
+    "url": "http://localhost:3105/#/v2-workspace/eb4215de-43e1-426f-bd40-b9859f42cfce",
+    "org": "db013dfd-011a-49b2-b87b-cf201cbcc483",
+    "suppressed": null
+  },
+  "heldBefore": 6,
+  "heldAfter": 6,
+  "url": "http://localhost:3105/#/v2-workspace/eb4215de-43e1-426f-bd40-b9859f42cfce",
+  "elapsedMs": 2053.7000000476837,
+  "closeButtons": 0,
+  "terminals": 0,
+  "dialogText": [],
+  "errors": [],
+  "warnings": [
+    [
+      "Failed to check for running process",
+      "[object Object]"
+    ]
+  ]
+}
