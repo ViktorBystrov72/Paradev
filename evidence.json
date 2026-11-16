@@ -1,0 +1,146 @@
+{
+  "issue": "https://github.com/ParadevAI/Paradev/issues/9559",
+  "source_commit": "736b1a180ed2a0599dc07dcbf31ccdd93ab009c6",
+  "baseline_commit": "d31b92a172d46c486a370da1fb966193493302a2",
+  "scope": "Automatic fallback for hosts add only. Explicit update pins and missing release publication are not changed.",
+  "method": "Generated SSH install script and actual installer run under sh against loopback HTTP fixtures using real curl and tar. A curl shim redirects GitHub URLs to the local server. The installed binaries are inert shell fixtures. No live SSH or cloud account is used.",
+  "before": [
+    {
+      "name": "missing pin",
+      "exitCode": 1,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 404\nerror: Failed to download https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\n",
+      "installed": false
+    },
+    {
+      "name": "published pin",
+      "exitCode": 0,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n\nInstalled!\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\n==> Extracting to /var/folders/1x/jbbd4d2s4q13m0h12f9lnzm80000gn/T/cli-installer-J1Nm19/installed CLI\n==> /var/folders/1x/jbbd4d2s4q13m0h12f9lnzm80000gn/T/cli-installer-J1Nm19/installed CLI/bin is already in PATH\n",
+      "installed": true
+    },
+    {
+      "name": "explicit pin",
+      "exitCode": 1,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 404\nerror: Failed to download https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\n",
+      "installed": false
+    },
+    {
+      "name": "server error",
+      "exitCode": 1,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 500\nerror: Failed to download https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\n",
+      "installed": false
+    },
+    {
+      "name": "both missing",
+      "exitCode": 1,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 404\nerror: Failed to download https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\n",
+      "installed": false
+    },
+    {
+      "name": "latest missing",
+      "exitCode": 1,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 404\nerror: Failed to download https://github.com/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz\n",
+      "installed": false
+    }
+  ],
+  "after": [
+    {
+      "name": "missing pin",
+      "exitCode": 0,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz",
+        "/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n\nInstalled!\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 404\nwarning: Release cli-v9.9.9 has no CLI archive for darwin-arm64; falling back to cli-latest\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz\n==> Extracting to /var/folders/1x/jbbd4d2s4q13m0h12f9lnzm80000gn/T/cli-installer-txdfW8/installed CLI\n==> /var/folders/1x/jbbd4d2s4q13m0h12f9lnzm80000gn/T/cli-installer-txdfW8/installed CLI/bin is already in PATH\n",
+      "installed": true
+    },
+    {
+      "name": "published pin",
+      "exitCode": 0,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n\nInstalled!\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\n==> Extracting to /var/folders/1x/jbbd4d2s4q13m0h12f9lnzm80000gn/T/cli-installer-gaOr42/installed CLI\n==> /var/folders/1x/jbbd4d2s4q13m0h12f9lnzm80000gn/T/cli-installer-gaOr42/installed CLI/bin is already in PATH\n",
+      "installed": true
+    },
+    {
+      "name": "explicit pin",
+      "exitCode": 1,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 404\nerror: Failed to download https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\n",
+      "installed": false
+    },
+    {
+      "name": "server error",
+      "exitCode": 1,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 500\nerror: Failed to download https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\n",
+      "installed": false
+    },
+    {
+      "name": "both missing",
+      "exitCode": 1,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz",
+        "/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-v9.9.9/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 404\nwarning: Release cli-v9.9.9 has no CLI archive for darwin-arm64; falling back to cli-latest\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 404\nerror: Failed to download https://github.com/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz\n",
+      "installed": false
+    },
+    {
+      "name": "latest missing",
+      "exitCode": 1,
+      "requests": [
+        "/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz"
+      ],
+      "stdout": "Installing Paradev CLI\n\n",
+      "stderr": "==> Platform: darwin-arm64\n==> Downloading https://github.com/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz\ncurl: (22) The requested URL returned error: 404\nerror: Failed to download https://github.com/paradevai/paradev/releases/download/cli-latest/superset-darwin-arm64.tar.gz\n",
+      "installed": false
+    }
+  ],
+  "checks": {
+    "ssh_setup": "15 pass / 0 fail",
+    "cli": "525 pass / 0 fail",
+    "marketing": "213 pass / 0 fail",
+    "desktop": "9680 pass / 0 fail",
+    "lint": "pass (13717 files)",
+    "typecheck": "42/42 pass",
+    "docs_typecheck": "pass",
+    "i18n": "pass, no catalog changes",
+    "full_suite": "27/30 tasks; failures in untouched shared/agent-setup/host-service tests; 3 host-service cases pass in scoped recheck"
+  },
+  "human_review": false,
+  "manual_testing": false
+}
