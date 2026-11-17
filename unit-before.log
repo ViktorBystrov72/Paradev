@@ -1,0 +1,39 @@
+bun test v1.4.3 (c6da4a4d3)
+
+src/renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/usePaneRegistry/components/BrowserPane/browserRuntimeRegistry.test.ts:
+(pass) browserRuntimeRegistry detached persistence > retains its persistence callback for navigation completion after detach [7.54ms]
+(pass) browserRuntimeRegistry detached persistence > over budget, pages an agent drives, that play audio, or hold unsaved input stay loaded [0.41ms]
+(pass) browserRuntimeRegistry detached persistence > a page an agent uses while the sweep waits on main stays loaded [0.07ms]
+(pass) browserRuntimeRegistry detached persistence > a page shown while the sweep waits on main stays loaded [0.05ms]
+(pass) browserRuntimeRegistry detached persistence > surfaces BrowserManager unregister failures [0.08ms]
+(pass) browserRuntimeRegistry pointer passthrough > mirrors the passthrough state onto shown webviews only [2.17ms]
+(pass) browserRuntimeRegistry overlay layer > mirrors the placeholder rect onto the overlay as well as the webview [0.05ms]
+(pass) browserRuntimeRegistry overlay layer > hides the overlay with the webview on detach [0.03ms]
+(pass) browserRuntimeRegistry overlay layer > raises a browser above a panel drawn over the page, and only there [0.39ms]
+(pass) browserRuntimeRegistry overlay layer > a browser shown again after an agent parked it takes clicks [0.12ms]
+(pass) browserRuntimeRegistry overlay layer > a browser that mounts inside a hidden sidebar stays hidden [0.42ms]
+(pass) browserRuntimeRegistry overlay layer > reports no overlay for an unknown pane [0.02ms]
+434 | 		const loadURL = mock(() => navigation.promise);
+435 | 		Object.assign(entry.webview, { loadURL });
+436 | 		try {
+437 | 			browserRuntimeRegistry.navigate(paneId, "localhost:4000/slow");
+438 | 			expect(loadURL).toHaveBeenCalledWith("http://localhost:4000/slow");
+439 | 			expect(browserRuntimeRegistry.getState(paneId).pendingUrl).toBe(
+                                                                    ^
+error: expect(received).toBe(expected)
+
+Expected: "http://localhost:4000/slow"
+Received: undefined
+
+      at <anonymous> (<worktree>/apps/desktop/src/renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/usePaneRegistry/components/BrowserPane/browserRuntimeRegistry.test.ts:439:63)
+(fail) browserRuntimeRegistry guest lifecycle > exposes a pending address without replacing the committed URL [0.45ms]
+(pass) browserRuntimeRegistry guest lifecycle > tracks the URL and title from events, not from the guest [0.17ms]
+(pass) browserRuntimeRegistry guest lifecycle > records the attempted URL of a failed main-frame load only [0.07ms]
+(pass) browserRuntimeRegistry guest lifecycle > drops the entry and closes the pane when the guest is destroyed [0.11ms]
+(pass) browserRuntimeRegistry background open > registers a hidden guest with a usable viewport and persists navigation without attaching [1.34ms]
+(pass) browserRuntimeRegistry open page lookup > finds only a visible, loaded pane on the same page [0.09ms]
+
+ 17 pass
+ 1 fail
+ 54 expect() calls
+Ran 18 tests across 1 file. [354.00ms]

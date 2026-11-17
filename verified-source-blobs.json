@@ -1,0 +1,17 @@
+[
+  {
+    "path": "apps/desktop/src/renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/usePaneRegistry/components/BrowserPane/browserRuntimeRegistry.test.ts",
+    "verified_blob": "1ad6134dbe22ea045a0490ce3c75e3b3b74cb57c",
+    "final_blob": "1ad6134dbe22ea045a0490ce3c75e3b3b74cb57c"
+  },
+  {
+    "path": "apps/desktop/src/renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/usePaneRegistry/components/BrowserPane/browserRuntimeRegistry.ts",
+    "verified_blob": "27f333f4290771ce49116494da950ec3fb2f51e2",
+    "final_blob": "27f333f4290771ce49116494da950ec3fb2f51e2"
+  },
+  {
+    "path": "apps/desktop/src/renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/usePaneRegistry/components/BrowserPane/components/BrowserPaneToolbar/BrowserPaneToolbar.tsx",
+    "verified_blob": "46bdccd0ed1ba8fd6576264bd46de38701d54cb6",
+    "final_blob": "46bdccd0ed1ba8fd6576264bd46de38701d54cb6"
+  }
+]

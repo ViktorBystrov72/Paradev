@@ -1,0 +1,28 @@
+bun test v1.4.3 (c6da4a4d3)
+
+src/renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/usePaneRegistry/components/BrowserPane/browserRuntimeRegistry.test.ts:
+(pass) browserRuntimeRegistry detached persistence > retains its persistence callback for navigation completion after detach [1.71ms]
+(pass) browserRuntimeRegistry detached persistence > over budget, pages an agent drives, that play audio, or hold unsaved input stay loaded [0.42ms]
+(pass) browserRuntimeRegistry detached persistence > a page an agent uses while the sweep waits on main stays loaded [0.06ms]
+(pass) browserRuntimeRegistry detached persistence > a page shown while the sweep waits on main stays loaded [0.04ms]
+(pass) browserRuntimeRegistry detached persistence > surfaces BrowserManager unregister failures [0.11ms]
+(pass) browserRuntimeRegistry pointer passthrough > mirrors the passthrough state onto shown webviews only [2.30ms]
+(pass) browserRuntimeRegistry overlay layer > mirrors the placeholder rect onto the overlay as well as the webview [0.06ms]
+(pass) browserRuntimeRegistry overlay layer > hides the overlay with the webview on detach [0.03ms]
+(pass) browserRuntimeRegistry overlay layer > raises a browser above a panel drawn over the page, and only there [0.49ms]
+(pass) browserRuntimeRegistry overlay layer > a browser shown again after an agent parked it takes clicks [0.18ms]
+(pass) browserRuntimeRegistry overlay layer > a browser that mounts inside a hidden sidebar stays hidden [0.75ms]
+(pass) browserRuntimeRegistry overlay layer > reports no overlay for an unknown pane [0.01ms]
+(pass) browserRuntimeRegistry guest lifecycle > exposes a pending address without replacing the committed URL [0.32ms]
+(pass) browserRuntimeRegistry guest lifecycle > drops an aborted pending address while keeping the current page [0.23ms]
+(pass) browserRuntimeRegistry guest lifecycle > an older aborted load cannot clear a newer pending address [0.17ms]
+(pass) browserRuntimeRegistry guest lifecycle > tracks the URL and title from events, not from the guest [0.16ms]
+(pass) browserRuntimeRegistry guest lifecycle > records the attempted URL of a failed main-frame load only [0.06ms]
+(pass) browserRuntimeRegistry guest lifecycle > drops the entry and closes the pane when the guest is destroyed [0.10ms]
+(pass) browserRuntimeRegistry background open > registers a hidden guest with a usable viewport and persists navigation without attaching [1.69ms]
+(pass) browserRuntimeRegistry open page lookup > finds only a visible, loaded pane on the same page [0.18ms]
+
+ 20 pass
+ 0 fail
+ 61 expect() calls
+Ran 20 tests across 1 file. [416.00ms]

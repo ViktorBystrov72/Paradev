@@ -1,0 +1,95 @@
+{
+  "source": "f68c1fa8c3e468539fb3211cda411f65620c08ae",
+  "base": "0f39bae78889d2d3f23510190b01d7fe67a979b9",
+  "verified_snapshot": "6c69c8a4ca23a07ad228a950905cf10e9eaebdb0",
+  "ui_base": "d1a5266ab06a13c2dfa83c9296ab9b5e1a5d154b",
+  "registry_tests": 20,
+  "browser_tests": 46,
+  "desktop_tests": 8982,
+  "typecheck_tasks": 42,
+  "monorepo_test_tasks": {
+    "passed": 28,
+    "total": 30,
+    "failed": [
+      "shared",
+      "agent-setup"
+    ]
+  },
+  "commands": [
+    {
+      "command": [
+        "bun",
+        "run",
+        "lint:fix"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "bun",
+        "run",
+        "lint"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "bun",
+        "run",
+        "typecheck"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "bun",
+        "test",
+        "src/renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/usePaneRegistry/components/BrowserPane"
+      ],
+      "cwd": "apps/desktop",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "bun",
+        "run",
+        "test",
+        "--continue"
+      ],
+      "cwd": ".",
+      "exit_code": 1
+    }
+  ],
+  "post_rebase_commands": [
+    {
+      "command": [
+        "bun",
+        "test",
+        "src/renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/usePaneRegistry/components/BrowserPane"
+      ],
+      "cwd": "apps/desktop",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "bun",
+        "run",
+        "typecheck"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "bun",
+        "run",
+        "lint"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    }
+  ]
+}

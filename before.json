@@ -1,0 +1,26 @@
+{
+  "stage": "before",
+  "identity": {
+    "url": "http://localhost:3185/#/v2-workspace/d965c714-4c79-480b-868a-897442b0abcd",
+    "org": "cf3826ed-3b65-4da1-b0d9-c8ea72fa842d"
+  },
+  "requested": "http://127.0.0.1:19241/slow",
+  "typed": "http://127.0.0.1:19241/slow",
+  "server": {
+    "pending": 1,
+    "requests": 1
+  },
+  "pending": {
+    "route": "http://localhost:3185/#/v2-workspace/d965c714-4c79-480b-868a-897442b0abcd",
+    "address": "Введите URL или запрос...",
+    "committedGuestUrl": "about:blank",
+    "loading": true,
+    "errors": [],
+    "clip": {
+      "x": 1146,
+      "y": 22,
+      "width": 582,
+      "height": 145
+    }
+  }
+}

@@ -1,0 +1,4 @@
+const holds=new Set<()=>void>();let requests=0;
+const page=(title:string)=>new Response(`<!doctype html><html><head><title>${title}</title></head><body style="font:24px system-ui;padding:40px"><h1>${title}</h1><p>Local browser navigation fixture</p></body></html>`,{headers:{"Content-Type":"text/html","Cache-Control":"no-store"}});
+Bun.serve({hostname:"127.0.0.1",port:19241,idleTimeout:0,async fetch(req){const path=new URL(req.url).pathname;if(path==="/slow"){requests++;await new Promise<void>(r=>holds.add(r));return page("Navigation completed")}if(path==="/status")return Response.json({pending:holds.size,requests});if(path==="/release"){for(const r of holds)r();holds.clear();return Response.json({released:true})}if(path==="/redirect")return Response.redirect("http://127.0.0.1:19241/fast",302);return page("Ready")}});
+console.log("Browser fixture listening on 127.0.0.1:19241");
