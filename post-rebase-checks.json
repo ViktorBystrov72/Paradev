@@ -1,0 +1,35 @@
+[
+  {
+    "command": [
+      "bun",
+      "test",
+      "src/renderer/lib/terminal/confirm-close-terminals.test.ts"
+    ],
+    "cwd": "apps/desktop",
+    "exit_code": 0,
+    "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-multi-20261117/post-rebase-probe-tests.log"
+  },
+  {
+    "command": [
+      "bun",
+      "x",
+      "turbo",
+      "typecheck",
+      "--filter=@superset/desktop",
+      "--filter=@superset/workspace-client"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-multi-20261117/post-rebase-typecheck.log"
+  },
+  {
+    "command": [
+      "bun",
+      "run",
+      "lint"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-multi-20261117/post-rebase-lint.log"
+  }
+]

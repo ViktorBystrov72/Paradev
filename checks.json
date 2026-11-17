@@ -1,0 +1,59 @@
+[
+  {
+    "command": [
+      "bun",
+      "run",
+      "lint:fix"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "elapsed_seconds": 5.64,
+    "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-multi-20261117/lint-fix.log"
+  },
+  {
+    "command": [
+      "bun",
+      "run",
+      "lint"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "elapsed_seconds": 3.02,
+    "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-multi-20261117/lint.log"
+  },
+  {
+    "command": [
+      "bun",
+      "test",
+      "src/renderer/lib/terminal"
+    ],
+    "cwd": "apps/desktop",
+    "exit_code": 0,
+    "elapsed_seconds": 6.07,
+    "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-multi-20261117/terminal-tests.log"
+  },
+  {
+    "command": [
+      "bun",
+      "test"
+    ],
+    "cwd": "packages/workspace-client",
+    "exit_code": 0,
+    "elapsed_seconds": 7.73,
+    "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-multi-20261117/workspace-client-tests.log"
+  },
+  {
+    "command": [
+      "bun",
+      "x",
+      "turbo",
+      "typecheck",
+      "--filter=@superset/desktop",
+      "--filter=@superset/workspace-client"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "elapsed_seconds": 8.08,
+    "log": "/Users/viktor/Documents/MyOpenSource/.tools/paradev-terminal-close-multi-20261117/typecheck.log"
+  }
+]

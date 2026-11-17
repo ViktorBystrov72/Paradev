@@ -1,0 +1,12 @@
+bun test v1.4.3 (c6da4a4d3)
+
+src/renderer/lib/terminal/confirm-close-terminals.test.ts:
+(pass) probeTerminalRunning > aborts a stalled request and allows the terminal to close [0.19ms]
+(pass) probeTerminalRunning > returns the live running state (true) [0.03ms]
+(pass) probeTerminalRunning > returns the live running state (false)
+(pass) checks a tab's terminals concurrently before allowing its close [0.17ms]
+
+ 4 pass
+ 0 fail
+ 8 expect() calls
+Ran 4 tests across 1 file. [312.00ms]

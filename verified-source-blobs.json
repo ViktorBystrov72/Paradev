@@ -1,0 +1,22 @@
+[
+  {
+    "file": "apps/desktop/src/renderer/lib/terminal/confirm-close-terminals.ts",
+    "ui_verified_blob": "bdcc9ad15f1f3fec4e57621402b65e9d3f7c5b8e",
+    "final_blob": "bdcc9ad15f1f3fec4e57621402b65e9d3f7c5b8e"
+  },
+  {
+    "file": "apps/desktop/src/renderer/lib/terminal/confirm-close-terminals.test.ts",
+    "ui_verified_blob": "9b19e939a7524d60bc1ae5cf2b0821548c6d9230",
+    "final_blob": "9b19e939a7524d60bc1ae5cf2b0821548c6d9230"
+  },
+  {
+    "file": "packages/workspace-client/src/lib/hostServiceLinks/hostServiceLinks.ts",
+    "ui_verified_blob": "0fa4a4d9a116085c847ac9818003bd0b7a8a982f",
+    "final_blob": "0fa4a4d9a116085c847ac9818003bd0b7a8a982f"
+  },
+  {
+    "file": "packages/workspace-client/src/lib/hostServiceLinks/hostServiceLinks.test.ts",
+    "ui_verified_blob": "15e3b4323e59e36fa53fc7c7d96012bcc8c46020",
+    "final_blob": "15e3b4323e59e36fa53fc7c7d96012bcc8c46020"
+  }
+]

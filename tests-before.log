@@ -1,0 +1,30 @@
+bun test v1.4.3 (c6da4a4d3)
+
+src/renderer/lib/terminal/confirm-close-terminals.test.ts:
+(pass) probeTerminalRunning > aborts a stalled request and allows the terminal to close [1.23ms]
+(pass) probeTerminalRunning > returns the live running state (true) [0.04ms]
+(pass) probeTerminalRunning > returns the live running state (false)
+72 | 		title: "Close terminals",
+73 | 		description: "A process is running",
+74 | 		confirmLabel: "Close",
+75 | 	});
+76 | 	try {
+77 | 		expect(isRunning.mock.calls.map(([id]) => id)).toEqual(["first", "second"]);
+                                                      ^
+error: expect(received).toEqual(expected)
+
+  [
+    "first",
+-   "second",
+  ]
+
+- Expected  - 1
++ Received  + 0
+
+      at <anonymous> (/Users/viktor/Documents/MyOpenSource/worktrees/paradev/terminal-close-timeout/apps/desktop/src/renderer/lib/terminal/confirm-close-terminals.test.ts:77:50)
+(fail) checks a tab's terminals concurrently before allowing its close [3.07ms]
+
+ 3 pass
+ 1 fail
+ 7 expect() calls
+Ran 4 tests across 1 file. [387.00ms]
