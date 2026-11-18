@@ -1,0 +1,41 @@
+{
+  "stage": "before",
+  "a": {
+    "route": "http://localhost:3025/#/workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+    "hidden": true,
+    "paneWidth": 1672,
+    "inset": "",
+    "pref": true,
+    "width": 1728,
+    "height": 1084
+  },
+  "b": {
+    "route": "http://localhost:3025/#/workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+    "hidden": false,
+    "paneWidth": 1672,
+    "inset": "340px",
+    "pref": true,
+    "width": 1728,
+    "height": 1084
+  },
+  "initial": {
+    "a": {
+      "route": "http://localhost:3025/#/workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+      "hidden": false,
+      "paneWidth": 1672,
+      "inset": "340px",
+      "pref": false,
+      "width": 1728,
+      "height": 1084
+    },
+    "b": {
+      "route": "http://localhost:3025/#/workspace/957d7b45-762d-42b6-ae4e-27c314eaf287",
+      "hidden": false,
+      "paneWidth": 1672,
+      "inset": "340px",
+      "pref": false,
+      "width": 1728,
+      "height": 1084
+    }
+  }
+}
